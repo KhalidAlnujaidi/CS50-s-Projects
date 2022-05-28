@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block body %}
+    
+
+    <ul>
+
+        <h1>{{  q  }} ?? Did you mean:</h1>
+        
+
+        {% for str in string %}
+            <a href= "wiki/{{ str }}"><li>{{ str }}</li></a>
+        {% endfor %}
+    
+    </ul>
+{% endblock %}

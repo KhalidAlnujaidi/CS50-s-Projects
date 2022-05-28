@@ -1,0 +1,35 @@
+{% extends "encyclopedia/layout.html" %}
+<head>
+    
+
+</head>
+
+
+{% block title %}
+    Creat Page
+{% endblock %}
+
+
+
+{% block body %}
+
+{% if existing %}
+    <script>alert("page exists")</script>
+        
+    
+{% endif %}
+
+<form action="{% url 'create' %}" method="POST">
+    <h1>Creat a new page :) </h1>
+<div class="form-group" style="width: 80%;">
+
+    {% csrf_token %}
+
+    {{ form }}
+
+    <input type="submit" value="Submit">
+</div>
+</form>
+
+    
+{% endblock %}
